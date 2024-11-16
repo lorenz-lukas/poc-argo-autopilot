@@ -1,0 +1,11 @@
+{
+  "appName": "sealed-secrets",
+  "userGivenName": "sealed-secrets",
+  "destNamespace": "sealed-secrets",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "apps/sealed-secrets/ops",
+  "srcRepoURL": "https://github.com/lorenz-lukas/poc-argo-autopilot.git",
+  "srcTargetRevision": "",
+  "labels": null,
+  "annotations": null
+}

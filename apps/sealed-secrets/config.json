@@ -1,0 +1,11 @@
+{
+  "appName": "crossplane",
+  "userGivenName": "crossplane",
+  "destNamespace": "crossplane",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "apps/crossplane/ops",
+  "srcRepoURL": "https://github.com/lorenz-lukas/poc-argo-autopilot.git",
+  "srcTargetRevision": "",
+  "labels": null,
+  "annotations": null
+}
