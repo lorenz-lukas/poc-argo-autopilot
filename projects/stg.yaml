@@ -63,7 +63,9 @@ spec:
               jsonnet: {}
               recurse: true
             repoURL: ""
-  syncPolicy: {}
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
   template:
     metadata:
       labels:
