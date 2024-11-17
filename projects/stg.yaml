@@ -64,8 +64,10 @@ spec:
               recurse: true
             repoURL: ""
   syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
+    automated:
+      allowEmpty: true
+      prune: true
+      selfHeal: true
   template:
     metadata:
       labels:
