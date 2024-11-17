@@ -6,7 +6,7 @@ namespace: crossplane
 helmCharts:
 - name: crossplane
   repo: https://charts.crossplane.io/stable
-  version: 1.19.0-rc.0
+  version: 1.19.0-rc.0.77.g184951c4b
   valuesInline:
       provider:
         packages:
