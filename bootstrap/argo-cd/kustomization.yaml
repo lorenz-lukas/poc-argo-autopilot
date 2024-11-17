@@ -16,7 +16,7 @@ configMapGenerator:
     literals:
     - admin.enabled=true
     - server.insecure="true"
-    - kustomize.buildOptions="--enable-alpha-plugins --enable-helm --load-restrictor LoadRestricttionsNone"
+    - kustomize.buildOptions="--enable-alpha-plugins --enable-helm --load-restrictor LoadRestrictionsNone"
     - statusbadge.enabled=true
     # - url=https://argo-fpcc-service.buy4.io
     - |
