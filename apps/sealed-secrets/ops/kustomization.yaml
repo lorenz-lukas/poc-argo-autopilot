@@ -3,3 +3,7 @@ kind: Kustomization
 namespace: sealed-secrets
 # resources:
 # - ../../base
+helmCharts:
+- name: crossplane
+  repo: https://charts.crossplane.io/stable
+  version: 1.19.0-rc.0
