@@ -7,8 +7,7 @@ helmCharts:
 - name: crossplane
   repo: https://charts.crossplane.io/stable
   version: 1.19.0-rc.0
-  helm:
-    valuesObject:
+  valuesInline:
       provider:
         packages:
           - xpkg.upbound.io/crossplane-contrib/provider-aws:v0.39.0
