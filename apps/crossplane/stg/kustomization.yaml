@@ -7,7 +7,7 @@ helmCharts:
 - name: crossplane
   releaseName: crossplane
   repo: https://charts.crossplane.io/stable
-  version: 1.19.0-rc.0.77.g184951c4b
+  version: 1.18.0
   valuesInline:
       provider:
         packages:
