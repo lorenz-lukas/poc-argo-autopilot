@@ -1,17 +1,29 @@
 kind: Kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
 namespace: argocd
+
 resources:
 - github.com/argoproj-labs/argocd-autopilot/manifests/base?ref=v0.4.17
+
 configMapGenerator:
-- behavior: merge
-  literals:
-  - |
-    repository.credentials=- passwordSecret:
-        key: git_token
-        name: autopilot-secret
-      url: https://github.com/
-      usernameSecret:
-        key: git_username
-        name: autopilot-secret
-  name: argocd-cm
+  - name: argocd-cmd-params-cm
+    behavior: merge
+    literals:
+      - server.insecure="true"
+
+  - name: argocd-cm
+    behavior: merge
+    literals:
+    - admin.enabled=true
+    - server.insecure="true"
+    - kustomize.buildOptions="--enable-alpha-plugins --enable-helm --load-restrictor LoadRestricttionsNone"
+    - statusbadge.enabled=true
+    # - url=https://argo-fpcc-service.buy4.io
+    - |
+      repository.credentials=- passwordSecret:
+          key: git_token
+          name: autopilot-secret
+        url: https://github.com/
+        usernameSecret:
+          key: git_username
+          name: autopilot-secret
